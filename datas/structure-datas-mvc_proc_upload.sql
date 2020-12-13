@@ -14,19 +14,19 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 --
--- Base de données : `mvc_proc_upload_pdo`
+-- Base de données : `mvc_proc_upload`
 --
-CREATE DATABASE IF NOT EXISTS `mvc_proc_upload_pdo` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `mvc_proc_upload_pdo`;
+CREATE DATABASE IF NOT EXISTS `mvc_proc_upload` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `mvc_proc_upload`;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `articles_pdo`
+-- Structure de la table `articles`
 --
 
-DROP TABLE IF EXISTS `articles_pdo`;
-CREATE TABLE `articles_pdo` (
+DROP TABLE IF EXISTS `articles`;
+CREATE TABLE `articles` (
                             `idarticles` int(10) UNSIGNED NOT NULL,
                             `articles_title` varchar(150) NOT NULL,
                             `articles_text` text NOT NULL,
@@ -35,10 +35,10 @@ CREATE TABLE `articles_pdo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `articles_pdo`
+-- Déchargement des données de la table `articles`
 --
 
-INSERT INTO `articles_pdo` (`idarticles`, `articles_title`, `articles_text`, `articles_date`, `users_idusers`) VALUES
+INSERT INTO `articles` (`idarticles`, `articles_title`, `articles_text`, `articles_date`, `users_idusers`) VALUES
 (1, 'La disparition de Saint-Exupéry : la découverte de la gourmette', 'Antoine de Saint-Exupéry s&#039;est éteint brutalement le 31 juillet 1944, mais le mystère entourant sa disparition aura perduré pendant plus de cinquante ans, jusqu&#039;à ce que Jean-Claude Bianco, un pêcheur marseillais, retrouve sa gourmette. Une découverte inouïe faite au large des calanques.\r\n\r\nNous ne ferons jamais assez l&#039;éloge d&#039;Antoine de Saint-Exupéry, ce monument de la littérature française disparu bien trop tôt. Écrivain, mais également aviateur, ses histoires chargées d&#039;humanisme, inspirées par son amour pour l&#039;aviation, ont nourri l&#039;imagination des petits et des grands. Ses œuvres, comme Vol de nuit (1931) et Le Petit Prince (1943), ne connaissent pas de frontières : elles ont conquis le cœur du monde entier.\r\n\r\nMais à peine un an après la naissance du Petit Prince, l&#039;histoire prend un tournant tragique. Saint-Exupéry, alors pilote dans l&#039;armée de l&#039;air, disparaît subitement au cours d&#039;un vol de reconnaissance effectué dans le sud de la France. Il semble n&#039;avoir laissé aucune trace...\r\n\r\nLa découverte de la gourmette relance l&#039;enquête\r\nPar un jour de tempête, le 7 septembre 1998, un heureux hasard conduit Jean-Claude Bianco, patron pêcheur, à remonter dans ses filets un petit bijou en argent perdu en mer au large de Marseille. Ternie et abîmée, la gourmette s&#039;avère bien plus précieuse qu&#039;elle n&#039;en a l&#039;air puisqu&#039;elle appartient à Saint-Exupéry !\r\n\r\nLa découverte semble littéralement incroyable, au point que Jean-Claude Bianco sera d&#039;abord accusé de tromperie avant de connaître la célébrité. Pourtant, les inscriptions gravées sur la gourmette -- les noms de Saint-Exupéry et de sa femme ainsi que l&#039;adresse de son éditeur -- ne mentent pas. Les recherches de l&#039;épave menées par la Comex de Henri-Germain Delauze (que Jean-Claude Bianco avait contacté tout de suite) restent d&#039;abord sans succès. Le bijou mènera finalement le plongeur Luc Vanrell jusqu&#039;aux débris de l&#039;avion de Saint-Exupéry, qui reposaient dans les profondeurs sous-marines, attendant d&#039;être retrouvés.\r\n\r\nUne exposition au Musée archéologique de Saint-Raphaël\r\nGrâce à la découverte de la gourmette, le mystère de la disparition de l&#039;aviateur semble avoir trouvé un dénouement, mais son histoire continue de nous captiver. L&#039;authentique gourmette était au cœur d&#039;une exposition consacrée à Antoine de Saint-Exupéry, « Des nuages aux profondeurs », au Musée archéologique de Saint-Raphaël, du 2 février au 13 avril 2018.', '2020-10-24 16:45:49', 2),
 (2, 'Face au virus, l’est de l’Asie réussit là où l’Europe échoue', 'Alors qu’on compte près de 23 300 cas par million d’habitants en Belgique, ce ratio est de 12 au Vietnam et 62 en Chine.\r\n\r\nPendant que l’Europe et l’Amérique luttent désespérément contre le coronavirus, l’est de l’Asie reste peu touché ; les nouveaux cas apparus cet été n’ont certainement pas atteint l’ampleur de la seconde vague qui déferle actuellement sur l’Europe. \r\n\r\nAlors qu’on compte, depuis le début de la pandémie, près de 23 300 cas par million d’habitants en Belgique, ce ratio est de 3 au Laos, 12 au Vietnam, 53 en Thaïlande, 62 en Chine, 498 en Corée du Sud, 748 au Japon, 1 350 en Indonésie - pour ne citer qu’eux -, selon les chiffres de l’Organisation mondiale de la santé (OMS). &quot;Dans l’ensemble, 1 % de tous les nouveaux cas et décès hebdomadaires ont été signalés dans la région du Pacifique occidental&quot; , relève l’OMS dans sa lettre épidémiologique hebdomadaire. \r\n\r\nUn pour cent seulement, dont la majorité a été enregistrée aux Philippines, en Malaisie et au Japon. La Chine, où le nouveau coronavirus avait fait son apparition à la fin de l’an dernier, se targue aujourd’hui d’avoir quasi éradiqué le virus sur son sol.', '2020-10-25 10:20:45', 1),
 (3, 'Figuiers, kakis, nashi, aronia : ces espèces fruitières hors du commun et bien capables de s&#039;épanouir en Belgique', 'Le jardinier est de nature curieuse. Trouvailles et nouveautés sont des tentations auxquelles il résiste rarement. La pépinière Bois De Rode Bos avec sa sélection de fruits peu courants a tout pour le séduire.\r\nLe chemin parcouru par Pierre Barbieux pour aboutir à cette nouvelle pépinière à nulle autre pareille illustre les étonnants tours et détours de la vie. Son diplôme en relations publiques dans la poche, il parcourt d’abord la planète en tant que Web Designer. \r\n\r\nPuis revenu au pays, il crée, tandis qu’internet en est encore à ses balbutiements, un site de réservations d’hôtels. Une expérience formidable qui lui permet d’acquérir autonomie et liberté. Quand des soucis de santé l’obligent à rebattre les cartes, il prend conscience du lien essentiel qui existe entre bien-être et qualité de l’alimentation. \r\n\r\nIl se penche sur tout ce qui touche à la nutrition. Ce qui l’amène aux modes de cultures en général et plus précisément au travail d’Agricovert à Gembloux. Une coopérative engagée dans la défense d’une agriculture plus respectueuse des hommes et de l’environnement/', '2020-10-25 10:50:41', 3),
@@ -64,20 +64,20 @@ INSERT INTO `articles_pdo` (`idarticles`, `articles_title`, `articles_text`, `ar
 -- --------------------------------------------------------
 
 --
--- Structure de la table `articles_has_rubriques_pdo`
+-- Structure de la table `articles_has_rubriques`
 --
 
-DROP TABLE IF EXISTS `articles_has_rubriques_pdo`;
-CREATE TABLE `articles_has_rubriques_pdo` (
+DROP TABLE IF EXISTS `articles_has_rubriques`;
+CREATE TABLE `articles_has_rubriques` (
                                           `articles_idarticles` int(10) UNSIGNED NOT NULL,
                                           `rubriques_idrubriques` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `articles_has_rubriques_pdo`
+-- Déchargement des données de la table `articles_has_rubriques`
 --
 
-INSERT INTO `articles_has_rubriques_pdo` (`articles_idarticles`, `rubriques_idrubriques`) VALUES
+INSERT INTO `articles_has_rubriques` (`articles_idarticles`, `rubriques_idrubriques`) VALUES
 (1, 10),
 (2, 7),
 (2, 11),
@@ -147,20 +147,20 @@ INSERT INTO `articles_has_rubriques_pdo` (`articles_idarticles`, `rubriques_idru
 -- --------------------------------------------------------
 
 --
--- Structure de la table `articles_has_theimages_pdo`
+-- Structure de la table `articles_has_theimages`
 --
 
-DROP TABLE IF EXISTS `articles_has_theimages_pdo`;
-CREATE TABLE `articles_has_theimages_pdo` (
+DROP TABLE IF EXISTS `articles_has_theimages`;
+CREATE TABLE `articles_has_theimages` (
                                           `articles_idarticles` int(10) UNSIGNED NOT NULL,
                                           `theimages_idtheimages` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `articles_has_theimages_pdo`
+-- Déchargement des données de la table `articles_has_theimages`
 --
 
-INSERT INTO `articles_has_theimages_pdo` (`articles_idarticles`, `theimages_idtheimages`) VALUES
+INSERT INTO `articles_has_theimages` (`articles_idarticles`, `theimages_idtheimages`) VALUES
 (2, 19),
 (2, 20),
 (3, 18),
@@ -192,20 +192,20 @@ INSERT INTO `articles_has_theimages_pdo` (`articles_idarticles`, `theimages_idth
 -- --------------------------------------------------------
 
 --
--- Structure de la table `permissions_pdo`
+-- Structure de la table `permissions`
 --
 
-DROP TABLE IF EXISTS `permissions_pdo`;
-CREATE TABLE `permissions_pdo` (
+DROP TABLE IF EXISTS `permissions`;
+CREATE TABLE `permissions` (
                                `idpermissions` int(10) UNSIGNED NOT NULL,
                                `permissions_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `permissions_pdo`
+-- Déchargement des données de la table `permissions`
 --
 
-INSERT INTO `permissions_pdo` (`idpermissions`, `permissions_name`) VALUES
+INSERT INTO `permissions` (`idpermissions`, `permissions_name`) VALUES
 (1, 'Administrat.eur.trice'),
 (3, 'Modérat.eur.rice'),
 (2, 'Rédact.eur.rice');
@@ -213,11 +213,11 @@ INSERT INTO `permissions_pdo` (`idpermissions`, `permissions_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `rubriques_pdo`
+-- Structure de la table `rubriques`
 --
 
-DROP TABLE IF EXISTS `rubriques_pdo`;
-CREATE TABLE `rubriques_pdo` (
+DROP TABLE IF EXISTS `rubriques`;
+CREATE TABLE `rubriques` (
                              `idrubriques` int(10) UNSIGNED NOT NULL,
                              `rubriques_titre` varchar(120) NOT NULL,
                              `rubriques_text` varchar(500) DEFAULT NULL,
@@ -225,10 +225,10 @@ CREATE TABLE `rubriques_pdo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `rubriques_pdo`
+-- Déchargement des données de la table `rubriques`
 --
 
-INSERT INTO `rubriques_pdo` (`idrubriques`, `rubriques_titre`, `rubriques_text`, `rubriques_idrubriques`) VALUES
+INSERT INTO `rubriques` (`idrubriques`, `rubriques_titre`, `rubriques_text`, `rubriques_idrubriques`) VALUES
 (6, 'Belgique', 'L\'actualité en Belgique', NULL),
 (7, 'Monde', 'L\'actualité dans le Monde', NULL),
 (8, 'Sport', 'Tout sur le sport', NULL),
@@ -242,21 +242,21 @@ INSERT INTO `rubriques_pdo` (`idrubriques`, `rubriques_titre`, `rubriques_text`,
 -- --------------------------------------------------------
 
 --
--- Structure de la table `theimages_pdo`
+-- Structure de la table `theimages`
 --
 
-DROP TABLE IF EXISTS `theimages_pdo`;
-CREATE TABLE `theimages_pdo` (
+DROP TABLE IF EXISTS `theimages`;
+CREATE TABLE `theimages` (
                              `idtheimages` int(10) UNSIGNED NOT NULL,
                              `theimages_title` varchar(400) DEFAULT NULL,
                              `theimages_name` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `theimages_pdo`
+-- Déchargement des données de la table `theimages`
 --
 
-INSERT INTO `theimages_pdo` (`idtheimages`, `theimages_title`, `theimages_name`) VALUES
+INSERT INTO `theimages` (`idtheimages`, `theimages_title`, `theimages_name`) VALUES
 (18, 'Le jardinier est de nature curieuse', '20201025160251-98998.png'),
 (19, 'L&#039;Europe en difficult&eacute;', '20201025160453-43530.png'),
 (20, 'L&#039;Asie s&#039;en sort bien', '20201025160511-74194.png'),
@@ -288,11 +288,11 @@ INSERT INTO `theimages_pdo` (`idtheimages`, `theimages_title`, `theimages_name`)
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users_pdo`
+-- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `users_pdo`;
-CREATE TABLE `users_pdo` (
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
                          `idusers` int(10) UNSIGNED NOT NULL,
                          `users_name` varchar(45) DEFAULT NULL,
                          `users_pwd` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT 'Le binaire permet au mot de passe d''être sensible à la casse (minuscule, majuscule)',
@@ -300,10 +300,10 @@ CREATE TABLE `users_pdo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `users_pdo`
+-- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users_pdo` (`idusers`, `users_name`, `users_pwd`, `permissions_idpermissions`) VALUES
+INSERT INTO `users` (`idusers`, `users_name`, `users_pwd`, `permissions_idpermissions`) VALUES
 (1, 'myNameIsAdmin', 'myNameIsAdmin', 1),
 (2, 'myNameIsEditor', 'myNameIsEditor', 2),
 (3, 'myNameIsModerator', 'myNameIsModerator', 3);
@@ -313,54 +313,54 @@ INSERT INTO `users_pdo` (`idusers`, `users_name`, `users_pwd`, `permissions_idpe
 --
 
 --
--- Index pour la table `articles_pdo`
+-- Index pour la table `articles`
 --
-ALTER TABLE `articles_pdo`
+ALTER TABLE `articles`
     ADD PRIMARY KEY (`idarticles`),
     ADD UNIQUE KEY `titre_UNIQUE` (`articles_title`),
     ADD KEY `fk_articles_users_idx` (`users_idusers`);
 
 --
--- Index pour la table `articles_has_rubriques_pdo`
+-- Index pour la table `articles_has_rubriques`
 --
-ALTER TABLE `articles_has_rubriques_pdo`
+ALTER TABLE `articles_has_rubriques`
     ADD PRIMARY KEY (`articles_idarticles`,`rubriques_idrubriques`),
     ADD KEY `fk_articles_has_rubriques_rubriques1_idx` (`rubriques_idrubriques`),
     ADD KEY `fk_articles_has_rubriques_articles1_idx` (`articles_idarticles`);
 
 --
--- Index pour la table `articles_has_theimages_pdo`
+-- Index pour la table `articles_has_theimages`
 --
-ALTER TABLE `articles_has_theimages_pdo`
+ALTER TABLE `articles_has_theimages`
     ADD PRIMARY KEY (`articles_idarticles`,`theimages_idtheimages`),
     ADD KEY `fk_articles_has_theimages_theimages1_idx` (`theimages_idtheimages`),
     ADD KEY `fk_articles_has_theimages_articles1_idx` (`articles_idarticles`);
 
 --
--- Index pour la table `permissions_pdo`
+-- Index pour la table `permissions`
 --
-ALTER TABLE `permissions_pdo`
+ALTER TABLE `permissions`
     ADD PRIMARY KEY (`idpermissions`),
     ADD UNIQUE KEY `droit_name_UNIQUE` (`permissions_name`);
 
 --
--- Index pour la table `rubriques_pdo`
+-- Index pour la table `rubriques`
 --
-ALTER TABLE `rubriques_pdo`
+ALTER TABLE `rubriques`
     ADD PRIMARY KEY (`idrubriques`),
     ADD KEY `fk_rubriques_rubriques1_idx` (`rubriques_idrubriques`);
 
 --
--- Index pour la table `theimages_pdo`
+-- Index pour la table `theimages`
 --
-ALTER TABLE `theimages_pdo`
+ALTER TABLE `theimages`
     ADD PRIMARY KEY (`idtheimages`),
     ADD UNIQUE KEY `theimages_name_UNIQUE` (`theimages_name`);
 
 --
--- Index pour la table `users_pdo`
+-- Index pour la table `users`
 --
-ALTER TABLE `users_pdo`
+ALTER TABLE `users`
     ADD PRIMARY KEY (`idusers`),
     ADD UNIQUE KEY `users_name_UNIQUE` (`users_name`),
     ADD KEY `fk_users_permissions_id` (`permissions_idpermissions`);
@@ -370,33 +370,33 @@ ALTER TABLE `users_pdo`
 --
 
 --
--- AUTO_INCREMENT pour la table `articles_pdo`
+-- AUTO_INCREMENT pour la table `articles`
 --
-ALTER TABLE `articles_pdo`
+ALTER TABLE `articles`
     MODIFY `idarticles` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
--- AUTO_INCREMENT pour la table `permissions_pdo`
+-- AUTO_INCREMENT pour la table `permissions`
 --
-ALTER TABLE `permissions_pdo`
+ALTER TABLE `permissions`
     MODIFY `idpermissions` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `rubriques_pdo`
+-- AUTO_INCREMENT pour la table `rubriques`
 --
-ALTER TABLE `rubriques_pdo`
+ALTER TABLE `rubriques`
     MODIFY `idrubriques` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT pour la table `theimages_pdo`
+-- AUTO_INCREMENT pour la table `theimages`
 --
-ALTER TABLE `theimages_pdo`
+ALTER TABLE `theimages`
     MODIFY `idtheimages` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
--- AUTO_INCREMENT pour la table `users_pdo`
+-- AUTO_INCREMENT pour la table `users`
 --
-ALTER TABLE `users_pdo`
+ALTER TABLE `users`
     MODIFY `idusers` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -404,35 +404,35 @@ ALTER TABLE `users_pdo`
 --
 
 --
--- Contraintes pour la table `articles_pdo`
+-- Contraintes pour la table `articles`
 --
-ALTER TABLE `articles_pdo`
-    ADD CONSTRAINT `fk_articles_users` FOREIGN KEY (`users_idusers`) REFERENCES `users_pdo` (`idusers`);
+ALTER TABLE `articles`
+    ADD CONSTRAINT `fk_articles_users` FOREIGN KEY (`users_idusers`) REFERENCES `users` (`idusers`);
 
 --
--- Contraintes pour la table `articles_has_rubriques_pdo`
+-- Contraintes pour la table `articles_has_rubriques`
 --
-ALTER TABLE `articles_has_rubriques_pdo`
-    ADD CONSTRAINT `fk_articles_has_rubriques_articles1` FOREIGN KEY (`articles_idarticles`) REFERENCES `articles_pdo` (`idarticles`) ON DELETE CASCADE,
-    ADD CONSTRAINT `fk_articles_has_rubriques_rubriques1` FOREIGN KEY (`rubriques_idrubriques`) REFERENCES `rubriques_pdo` (`idrubriques`) ON DELETE CASCADE;
+ALTER TABLE `articles_has_rubriques`
+    ADD CONSTRAINT `fk_articles_has_rubriques_articles1` FOREIGN KEY (`articles_idarticles`) REFERENCES `articles` (`idarticles`) ON DELETE CASCADE,
+    ADD CONSTRAINT `fk_articles_has_rubriques_rubriques1` FOREIGN KEY (`rubriques_idrubriques`) REFERENCES `rubriques` (`idrubriques`) ON DELETE CASCADE;
 
 --
--- Contraintes pour la table `articles_has_theimages_pdo`
+-- Contraintes pour la table `articles_has_theimages`
 --
-ALTER TABLE `articles_has_theimages_pdo`
-    ADD CONSTRAINT `fk_articles_has_theimages_articles1` FOREIGN KEY (`articles_idarticles`) REFERENCES `articles_pdo` (`idarticles`) ON DELETE CASCADE,
-    ADD CONSTRAINT `fk_articles_has_theimages_theimages1` FOREIGN KEY (`theimages_idtheimages`) REFERENCES `theimages_pdo` (`idtheimages`) ON DELETE CASCADE;
+ALTER TABLE `articles_has_theimages`
+    ADD CONSTRAINT `fk_articles_has_theimages_articles1` FOREIGN KEY (`articles_idarticles`) REFERENCES `articles` (`idarticles`) ON DELETE CASCADE,
+    ADD CONSTRAINT `fk_articles_has_theimages_theimages1` FOREIGN KEY (`theimages_idtheimages`) REFERENCES `theimages` (`idtheimages`) ON DELETE CASCADE;
 
 --
--- Contraintes pour la table `rubriques_pdo`
+-- Contraintes pour la table `rubriques`
 --
-ALTER TABLE `rubriques_pdo`
-    ADD CONSTRAINT `fk_rubriques_rubriques1` FOREIGN KEY (`rubriques_idrubriques`) REFERENCES `rubriques_pdo` (`idrubriques`);
+ALTER TABLE `rubriques`
+    ADD CONSTRAINT `fk_rubriques_rubriques1` FOREIGN KEY (`rubriques_idrubriques`) REFERENCES `rubriques` (`idrubriques`);
 
 --
 -- Contraintes pour la table `users`
 --
-ALTER TABLE `users_pdo`
-    ADD CONSTRAINT `fk_users_permission` FOREIGN KEY (`permissions_idpermissions`) REFERENCES `permissions_pdo` (`idpermissions`);
+ALTER TABLE `users`
+    ADD CONSTRAINT `fk_users_permission` FOREIGN KEY (`permissions_idpermissions`) REFERENCES `permissions` (`idpermissions`);
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
