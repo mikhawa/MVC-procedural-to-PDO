@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @return PDO
+ * @return PDO|string
  */
 function connectPDOModel()
 {
@@ -16,6 +16,6 @@ function connectPDOModel()
         $erreur = $e->getCode();
         $erreur .= " : ";
         $erreur .= $e->getMessage();
-        die($erreur);
+        return $erreur;
     }
 }
