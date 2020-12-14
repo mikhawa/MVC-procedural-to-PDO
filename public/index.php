@@ -12,6 +12,7 @@ require_once "../model/connectPDOModel.php";
 
 // DB mysqli connection
 $db = connectDBModel();
+// DB PDO connection
 $dbPDO = connectPDOModel();
 
 // connect mysqli error

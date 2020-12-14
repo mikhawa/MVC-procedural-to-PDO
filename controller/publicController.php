@@ -17,7 +17,7 @@ if (isset($_GET['p']) && $_GET['p'] == "connect") {
         $thename = htmlspecialchars(strip_tags(trim($_POST['users_name'])), ENT_QUOTES);
         $thepwd = htmlspecialchars(strip_tags(trim($_POST['users_pwd'])), ENT_QUOTES);
 
-        $connect = connectUser($db, $thename, $thepwd);
+        $connect = connectUser($dbPDO, $thename, $thepwd);
 
         // connexion réussie
         if ($connect) {
